@@ -1,4 +1,4 @@
-import { Express } from "express";
+import express from "express";
 import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import cors from "cors";
@@ -13,7 +13,9 @@ app.use(cors());
 // Mongodb cluod atlas
 const CONNECTION_URL =
   "mongodb+srv://dhaedream:dhaedream@cluster0.cveob.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5050;
+
+// const mongoose = require("mongoose");
 
 mongoose
   .connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -22,4 +24,4 @@ mongoose
   )
   .catch((error) => console.log(error.message));
 
-mongoose.set("useFindAndModify", false);
+// mongoose.set("useFindAndModify", false);
