@@ -7,7 +7,6 @@ import postRoutes from "./routes/posts.js";
 //initialize express server
 const app = express();
 
-//every route for post will come from http://localhost:5050/posts
 app.use("/posts", postRoutes);
 
 //limit size of images
@@ -18,7 +17,7 @@ app.use(cors());
 // Mongodb cluod atlas
 const CONNECTION_URL =
   "mongodb+srv://dhaedream:dhaedream@cluster0.cveob.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
-const PORT = process.env.PORT || 5005;
+const PORT = process.env.PORT || 5050;
 
 // const mongoose = require("mongoose");
 
